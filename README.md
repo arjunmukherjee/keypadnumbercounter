@@ -4,6 +4,10 @@ Given a keypad, a set of adjacency (movement) rules, a starting point on the key
 ### Build
 - ./gradlew clean build
 
+### Run
+- ./gradlew clean build
+	- java -jar build/libs/keypadnumbercounter-1.0.jar
+
 ### Test
 - ./gradlew clean build test
 
