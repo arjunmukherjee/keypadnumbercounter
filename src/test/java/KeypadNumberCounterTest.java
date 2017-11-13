@@ -13,7 +13,7 @@ public class KeypadNumberCounterTest {
     @Before
     public void setUp() throws Exception {
         startingPoint = new Point(0,0);
-        knc = new KeypadNumberCounter(startingPoint, new Keypad(KeyPadTypes.NUMERIC_KEY_PAD), new Diagonal());
+        knc = new KeypadNumberCounter(startingPoint, new NumericKeypad(), new Diagonal());
     }
 
     @Test
@@ -22,9 +22,19 @@ public class KeypadNumberCounterTest {
     }
 
     @Test
+    public void getCountForThreeDigit() throws Exception {
+        assertEquals(7, knc.getCount(3));
+    }
+
+    @Test
     public void getCountForTenDigits() throws Exception {
         assertEquals(27770, knc.getCount(10));
     }
+
+//    @Test
+//    public void getCountForTwentyDigits() throws Exception {
+//        assertEquals(27770, knc.getCount(20));
+//    }
 
     @Test
     public void getCountForZeroDigits() throws Exception {

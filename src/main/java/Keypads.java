@@ -1,4 +1,4 @@
-public abstract class KeyPadTypes {
+public abstract class Keypads {
     public static final char[][] NUMERIC_KEY_PAD = new char[][] {{'1','2','3'},
                                                                  {'4','5','6'},
                                                                  {'7','8','9'},

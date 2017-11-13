@@ -27,7 +27,7 @@ class Diagonal implements Moves {
     }
 
     @Override
-    public Set<Character> disallowedCharacters() {
-        return disallowedCharacters;
+    public boolean isValidCharacter(char c) {
+        return !disallowedCharacters.contains(c);
     }
 }

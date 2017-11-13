@@ -37,10 +37,9 @@ public class KeypadNumberCounter {
     }
 
     private boolean isValidPoint(Point point) {
-        return point.y >= 0 && point.y < this.keypad.getNumberOfRows() &&
-                point.x >=0 && point.x < this.keypad.getNumberOfColumns() &&
-                !this.moves.disallowedCharacters().contains(keypad.getKeypad()[point.y][point.x]) &&
-                !this.moves.disallowedCharacters().contains(keypad.getKeypad()[point.y][point.x]);
+        return this.keypad.isWithinBounds(point) &&
+                this.moves.isValidCharacter(keypad.getKeypad()[point.y][point.x]) &&
+                this.moves.isValidCharacter(keypad.getKeypad()[point.y][point.x]);
     }
 }
 
