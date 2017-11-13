@@ -1,6 +1,12 @@
 # keypadnumbercounter
 Given a keypad, a set of adjacency (movement) rules, a starting point on the keypad and a digit count : calculate the total number of unique numbers (of digit length) that can be generated.
 
+### Build
+- ./gradlew clean build
+
+### Test
+- ./gradlew clean build test
+
 ### Example
 ```
 Keypad  : 1  2  3
